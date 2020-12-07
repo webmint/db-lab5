@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 Lab work #5
+  h2 Complex Request with SQL Editor
+  ul
+  each v in complexRequest
+    li= v.employee_name + ' has income ' + v.monthly_income
+  h2 Total salary
+  p Total salary is #{totalSalary}
+  h2 Amount employees
+  p Amount of employees is #{amountEmployees}
+  h2 Average salary
+  p Average salary is #{averageSalary}
+  h2 Lowest salary
+  ul
+  each v in lowestSalary
+    li= v.full_name + ' has salary ' + v.sallary
+  h2 Highest sallary
+  ul
+  each v in highestSalary
+    li= v.full_name + ' has salary ' + v.sallary
+
+  h2 Salary Ascending
+  ul
+  each v in salaryAsc
+    li= v.full_name + ' has salary ' + v.sallary
+  h2 Salary Descending
+  ul
+  each v in salaryDesc
+    li= v.full_name + ' has salary ' + v.sallary
